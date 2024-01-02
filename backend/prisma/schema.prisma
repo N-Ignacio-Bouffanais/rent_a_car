@@ -11,12 +11,17 @@ datasource db {
 }
 
 
-model Car {
+model Inscription {
   id String @id @default(cuid())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   username String
-  rut String @unique
+  dni String @unique
+  car_model String
+  price Int
+  car_brand String
+  year Int
+  color String
 
-  @@map("cars")
+  @@map("inscriptions")
 }

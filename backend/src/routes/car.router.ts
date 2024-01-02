@@ -1,7 +1,8 @@
-import { Router, Request, Response, json } from "express";
+import { getItem, postItem } from "controllers/car.controller";
+import { Router } from "express";
 
 export const router = Router();
 
-router.get("/", (req:Request,res:Response)=>{
-  res.send("Hello")
-})
+router.post("/create", postItem);
+
+router.get("/table", getItem);
