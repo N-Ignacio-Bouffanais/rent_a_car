@@ -1,10 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import TableCar from "../components/TableCar";
+const URL = 'http://localhost:3000/api'
 ---
 
 <Layout title="Table Car">
   <main>
-    <TableCar client:load/>
+    <TableCar URL={URL}  client:load/>
   </main>
 </Layout>

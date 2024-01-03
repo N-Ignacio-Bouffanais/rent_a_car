@@ -11,7 +11,7 @@ export class CreateSolicitudDto {
   @IsNotEmpty()
   car_model: string;
   @IsInt()
-  @Min(2000000)
+  @Min(400000)
   price: number;
   @IsString()
   @IsNotEmpty()
